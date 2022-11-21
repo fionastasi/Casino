@@ -1,4 +1,4 @@
-# Slot-machine
+# Casino
 
 Simularemos una maquina que es bastante popular en los casinos; una slot machine, con la cual simularemos la experiencia completa del casino al usar esta maquina de azar desde diferentes puntos de vista de diferentes clientes.
 
