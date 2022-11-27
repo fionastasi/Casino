@@ -8,8 +8,8 @@
 #define Credito_h
 #include "Jugador.h"
 
-class Credito {
-private:
+class Credito
+private: public Jugador;{
     int fichasIniciales;
     int fichasFinales;
 public:
