@@ -19,6 +19,7 @@ private:
     int premio;
     string resultado;
 public:
+    TragaMonedas(int);
     int dineroMaquina;
     int getDineroMaquina();
     void setDineroMaquina(int);
@@ -38,6 +39,10 @@ public:
     void setresultado(string);
 };
 
+TragaMonedas::TragaMonedas(int Fichasapostadas):Juego(0){
+    apuesta=Fichasapostadas;
+}
+
 int TragaMonedas::getDineroMaquina()
 {
     return dineroMaquina;
@@ -48,36 +53,30 @@ void TragaMonedas::setDineroMaquina(int _dineroMaquina)
 }
 int TragaMonedas::setJugar(int apostar)
 {
-    dineroMaquina++;
-    if (jugar== 1)
-    {
+    int opcion;
         cout<<"Cuanto desea apostar: 1)5 o 2)10"<<endl;
-        if (apostar==1){
+    cin>>opcion;
+        if (opcion==1){
             apostar=apostar-5;}
-        else if (apostar==2){
+        else if (opcion==2){
             apostar=apostar-10;
         }
         else{
             cout<<"opción no válida"<<endl;
         }
-        int num1=rand()%10+1; //Generar un num random del 0-10
-        int num2=rand()%10+1;
-        int num3=rand()%10+1;
+        num1=rand()%10+1; //Generar un num random del 0-10
+        num2=rand()%10+1;
+        num3=rand()%10+1;
         //Random azar=new Random();
         //num1=(int)azar.Next(0,10);
         //num2=(int)azar.Next(0,10);
         //num3=(int)azar.Next(0,10);
         getresultado();
         return premio;
-    }
-    else {
-        cout<<"Vuelva pronto!"<<endl;
-    }
-    return 0;
 }
 void TragaMonedas::getresultado()
 {
-    cout<<"Sus números son:"<<"[{0}] [{1}] [{2}]"<< num1 << num2<< num3<<endl;
+    cout<<"Sus números son:"<<"[{"<<num1<<"}]"<<"[{"<<num2<<"}]"<<"[{"<<num3<<"}]"<<endl;
 }
 int TragaMonedas::setPremio(int apostar)
 {
