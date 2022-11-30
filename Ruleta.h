@@ -16,12 +16,13 @@ private:
     int apuesta;
     int num1Mesa;
     int colorMesa;
-    int num1J;
+    int numJ;
     int colorJ;
     int jugar;
     int premio;
     string resultado;
 public:
+    Ruleta(int);
     int getDineroMesa();
     void setDineroMesa(int);
     int getApuesta();
@@ -37,6 +38,9 @@ public:
     void getresultado();
     void setresultado(string);
 };
+Ruleta::Ruleta(int FichasApostadas):Juego(0){
+    apuesta=FichasApostadas;
+}
 
 int Ruleta::getDineroMesa()
 {
@@ -48,37 +52,35 @@ void Ruleta::setDineroMesa(int _dineroMesa)
 }
 int Ruleta::setJugar(int apostar)
 {
-    if (jugar== 2)
-    {
+        int opcion;
         cout<<"Cuanto desea apostar: 1)10 o 2)20"<<endl;
-        if (apostar==1){
+        cin>>opcion;
+        if (opcion==1){
             apostar=apostar-10;}
-        else if (apostar==2){
+        else if (opcion==2){
             apostar=apostar-20;
         }
         else{
             cout<<"opción no válida"<<endl;
         }
-        int numJ=rand()%36+1;
-        int colorJ=rand()%2+1;
+        num1Mesa=rand()%36+1;
+        colorMesa=rand()%2+1;
+    cout<<"Elije tu numero y color"<<endl;
+    cin>>numJ;
+    cin>>colorJ;
         getresultado();
         return premio;
-    }
-    else {
-        cout<<"Vuelva pronto!"<<endl;
-    }
-    return 0;
 }
 
 void Ruleta::getresultado()
 {
-    cout<<"El resultado fue:"<<"[{0}] [{1}]"<< num1Mesa<< colorMesa<<endl;
-    cout<<"Sus apuesta fue:"<<"[{0}] [{1}]"<< num1J<< colorJ<<endl;
+    cout<<"El resultado fue:"<<"[{"<<num1Mesa<<"}]"<<"[{"<<colorMesa<<"}]"<<endl;
+    cout<<"Sus apuesta fue:"<<"[{"<<numJ<<"}]"<<"[{"<<colorJ<<"}]"<<endl;
 }
 int Ruleta::setPremio(int apostar)
 {
 //Si el número y el color son iguales, gana su apuesta + 10 monedas
-    if(num1J==num1Mesa && colorMesa==colorJ)
+    if(numJ==num1Mesa && colorMesa==colorJ)
     {
         setDineroMesa(getDineroMesa()-10);
         return 10;
@@ -93,3 +95,4 @@ int Ruleta::setPremio(int apostar)
 
 
 #endif /* Ruleta_h */
+
