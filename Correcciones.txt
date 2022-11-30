@@ -1,0 +1,85 @@
+============================ Error 1 =====================================
+
+Error original: Mi descripción del GitHub no estaba completa, no incluía indicaciones para el usuario
+
+Cambio realizado: Corregí el readme:
+
+Descripción: Simularemos una maquina que es bastante popular en los casinos; una traga monedas y una ruleta, con la cual simularemos la experiencia completa del casino al usar una maquina y un juego de azar, involucrando jugadores, dinero, apuestas y los dos juegos con sus cobros automáticos.
+
+Lo primero que el usuario hará será ingresar su nombre y el dinero inicial con el que cuenta, después, decidirá de su dinero, cuánto quiere cambiarlo a fichas para jugar y de ahí, decidirá que juego jugar, si la traga monedas o la ruleta. Si decide la traga monedas, se le descontarán $20 que es el monto inicial para jugar y de ahí habrán premios si coinciden los números o no. Si decide la ruleta, apostará por el número y color que decida y según el resultado es si gana o no.
+
+Líneas de código donde se ve la corrección: ReadMe
+
+============================ Error 2 =====================================
+
+Error original: Mi descripción de las clases en mi diagrama las corregí
+
+Cambio realizado: Corregí mi UML:
+
+Agregué los constructores, así como cambié el nombre de "Crédito" a "Fichas" para que hiciese referencia a un objeto
+
+Líneas de código donde se ve la corrección: Diagrama UML
+
+============================ Error 3 =====================================
+
+Error original: Programación de clases ".h" y ".cpp"
+
+Cambio realizado: Utilizar el formato adecuado:
+
+Al principio había entregado puros archivos ".cpp" ya que no tenía ningún programa para hacer c++ disponible para mi computadora, entonces usaba el online, ya después descargué el "Xcode" y de ahí tuve que aprender a usarlo para hacer mis archivos ".h" y ".cpp"
+
+Líneas de código donde se ve la corrección: Archivos subidos en el GitHub 
+
+============================ Error 4 =====================================
+
+Error original: No programar bien 2 líneas de código en mi clase "Jugador"
+
+Cambio realizado: Ubicación de las líneas:
+
+#ifndef Jugador_h  ---> Estaban hasta el final entonces marcaba error al querer definir "Jugador"
+#define Jugador_h  --->
+
+Líneas de código donde se ve la corrección: Líneas 4 y 5
+
+============================ Error 5 =====================================
+
+Error original: Sobrecarga de mi atributo y método (dineroInicial)
+
+Cambio realizado: Ubicación de las líneas:
+
+void Jugador::setDineroInicial(int _dineroInicial){
+    dineroInicial = _dineroInicial - fichasIniciales;
+    return dineroInicial;
+} 
+
+Cambié la clase en donde estaban estas líneas, las puse en la clase de "Jugador"
+
+============================ Error 6 =====================================
+
+Error original: Fallo en la creación de objetos
+
+Cambio realizado: sintaxis:
+
+Jugador Jugador;  ---> Jugador jugador;
+Credito Credito;   ---> Credito credito;
+Juego Juego;   ---> Juego juego;
+TragaMonedas TragaMonedas;   ---> TragaMonedas tragaMonedas
+Ruleta Ruleta;   ---> Ruleta ruleta;
+
+Líneas de código donde se ve la corrección: En el main 15-19
+
+============================ Error 7 =====================================
+
+Error original: "cin" y "cout"
+
+Cambio realizado: sintaxis:
+
+No había puesto estas líneas hasta arriba y no me aceptaba los "cin" y "cout"
+
+#include <iostream>
+using namespace std;
+
+Líneas de código donde se ve la corrección: En el main 6-7
+
+
+
