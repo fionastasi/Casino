@@ -21,6 +21,11 @@ public:
     void setFichasFinales(int);
 };
 
+Fichas::Fichas(int FichasIniciales,int FichasFinales):Jugador("", 0){
+    fichasIniciales=FichasIniciales;
+    fichasFinales=FichasFinales;
+}
+
 void Fichas::setFichas(int _fi, int _ff){
     fichasIniciales = _fi;
     fichasFinales = _ff;
