@@ -1,7 +1,16 @@
 # Casino
 
-Descripción: Simularemos una maquina que es bastante popular en los casinos; una traga monedas y una ruleta, con la cual simularemos la experiencia completa del casino al usar una maquina y un juego de azar, involucrando jugadores, dinero, apuestas y los dos juegos con sus cobros automáticos.
+## Description: 
+This project simulates a casino experience by integrating a slot machine and a roulette wheel. Users can enjoy a complete gambling environment, including money management, betting, and automatic payouts.
 
-Lo primero que el usuario hará será ingresar su nombre y el dinero inicial con el que cuenta, después, decidirá de su dinero, cuánto quiere cambiarlo a fichas para jugar y de ahí, decidirá que juego jugar, si la traga monedas o la ruleta.
-Si decide la traga monedas, se le descontarán $20 que es el monto inicial para jugar y de ahí habrán premios si coinciden los números o no.
-Si decide la ruleta, apostará por el número y color que decida y según el resultado es si gana o no.
+## How It Works:
+
+The user starts by entering their name and the initial amount of money they have.
+
+They then decide how much of their money to convert into chips for gameplay.
+
+Users can choose between two games: the slot machine or the roulette wheel.
+
+  For the slot machine, $20 is deducted per game, and prizes are awarded based on the numbers that appear.
+  
+  For the roulette wheel, users place bets on a number and color and win or lose based on the outcome of the spin.
